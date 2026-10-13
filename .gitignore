@@ -4,3 +4,9 @@ node_modules/
 dist/
 build/
 frontend/public/video.mp4
+
+# TypeScript outputs from legacy builds
+backend/src/**/*.js
+backend/src/**/*.js.map
+backend/src/**/*.d.ts
+backend/src/**/*.d.ts.map

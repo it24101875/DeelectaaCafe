@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon --exec node --loader ts-node/esm src/server.ts",
-    "build": "tsc"
+    "dev": "node --watch --loader ts-node/esm src/server.ts",
+    "build": "tsc",
+    "test": "npm run build && node --test tests/*.test.mjs"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongoose": "^9.6.2",
-    "nodemailer": "^8.0.7"
+    "nodemailer": "^10.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -25,7 +26,6 @@
     "@types/mongoose": "^5.11.96",
     "@types/node": "^25.7.0",
     "@types/nodemailer": "^8.0.0",
-    "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   }

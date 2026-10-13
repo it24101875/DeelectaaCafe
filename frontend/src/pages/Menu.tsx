@@ -1,108 +1,118 @@
-import { motion } from 'framer-motion';
-import { FiZoomIn } from 'react-icons/fi';
-
-const Menu = () => {
-  const menuPages = [
-    { id: 1, src: '/menu-1.png', title: 'Food Menu - Burgers & Sandwiches' },
-    { id: 2, src: '/menu-2.png', title: 'Signature Submarines & Breakfast' },
-    { id: 3, src: '/menu-3.png', title: 'Beverages & Brews' },
-    { id: 4, src: '/menu-4.png', title: 'Milkshakes, Juices & Desserts' },
-  ];
-
+import { useState } from "react";
+import { useSearchParams, Link } from "react-router-dom";
+import groups from "../menu-data.json";
+export default function Menu() {
+  const [params, setParams] = useSearchParams();
+  const cat = params.get("category") || "All";
+  const [q, setQ] = useState("");
+  const shown = groups
+    .filter((g) => cat === "All" || g.name === cat)
+    .map((g) => ({
+      ...g,
+      items: g.items.filter((i) =>
+        (i.name + " " + i.description)
+          .toLowerCase()
+          .includes(q.trim().toLowerCase()),
+      ),
+    }))
+    .filter((g) => g.items.length);
   return (
-    <div className="relative min-h-screen bg-stone-950 overflow-hidden">
-      {/* Aesthetic Background Elements */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20 blur-sm scale-110"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-transparent to-stone-950"></div>
+    <div className="menu-page shell">
+      <div className="menu-intro">
+        <p className="eyebrow">Freshly made. Happily shared.</p>
+        <h1>
+          Find your <em>favourite.</em>
+        </h1>
+        <p>Coffee, coolers, comforting bites, and something sweet.</p>
+        <a className="text-link" href="/brand/menu.pdf" download>
+          Download our printed menu (PDF · 45 MB) ↓
+        </a>
       </div>
-
-      {/* Floating Decorative Items */}
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 10, 0]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="fixed top-40 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{
-          y: [0, 30, 0],
-          rotate: [0, -15, 0]
-        }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="fixed bottom-40 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"
-      />
-
-      <div className="relative z-10 pt-40 pb-24 container mx-auto px-6">
-        <div className="text-center mb-20">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-primary font-bold uppercase tracking-[0.4em] text-sm mb-4 block"
-          >
-            Digital Experience
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
-          >
-            Our Menu
-          </motion.h1>
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "100px" }}
-            className="h-1 bg-primary mx-auto rounded-full"
-          />
-        </div>
-
-        <div className="max-w-4xl mx-auto space-y-20">
-          {menuPages.map((page, index) => (
-            <motion.div
-              key={page.id}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative group"
+      <div className="menu-controls">
+        <label htmlFor="menu-search">Search the menu</label>
+        <input
+          id="menu-search"
+          type="search"
+          placeholder="Try latte, burger, or chocolate…"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+        <div className="category-tabs" aria-label="Menu categories">
+          {["All", ...groups.map((g) => g.name)].map((n) => (
+            <button
+              key={n}
+              aria-pressed={cat === n}
+              className={cat === n ? "selected" : ""}
+              onClick={() => setParams(n === "All" ? {} : { category: n })}
             >
-              {/* Card Glow Effect */}
-              <div className="absolute -inset-4 bg-primary/20 rounded-[2.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-
-              <div className="relative bg-white/5 backdrop-blur-md p-4 md:p-6 rounded-[2rem] border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-                <div className="absolute top-10 right-10 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-primary p-4 rounded-full text-white shadow-xl">
-                    <FiZoomIn size={24} />
-                  </div>
-                </div>
-
-                <img
-                  src={page.src}
-                  alt={page.title}
-                  className="w-full rounded-[1.5rem] shadow-lg"
-                />
-
-                <div className="mt-8 flex justify-center">
-                  <span className="text-stone-500 font-bold uppercase tracking-widest text-[10px] bg-stone-900/50 px-4 py-1 rounded-full border border-white/5">
-                    Page {page.id} — {page.title}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+              {n}
+            </button>
           ))}
         </div>
-
-        <div className="mt-32 text-center">
-          <p className="text-stone-500 text-sm italic tracking-wide">
-            * All prices are in Sri Lankan Rupees (Rs.). A 10% service charge applies to all items.
-          </p>
-        </div>
       </div>
+      <p className="menu-note">
+        All prices are in Sri Lankan rupees (Rs.). A 10% service charge applies
+        to all items. Please let our team know about any allergies or dietary
+        requirements.
+      </p>
+      <div aria-live="polite">
+        {shown.length ? (
+          shown.map((g) => (
+            <section className="menu-group" key={g.name}>
+              <h2>{g.name}</h2>
+              {g.name === "Speciality Coffee" && (
+                <p className="menu-note">Served hot or cold.</p>
+              )}
+              {g.name === "Bubble Tea" && (
+                <p className="menu-note">Chewy tapioca pearls in every sip.</p>
+              )}
+              <div className="menu-grid">
+                {g.items.map((i) => (
+                  <article className="menu-item" key={i.name}>
+                    <div className="item-top">
+                      <h3>
+                        {i.name}
+                        {i.signature && (
+                          <span
+                            className="signature"
+                            aria-label="Signature favourite"
+                          >
+                            {" "}
+                            ✦
+                          </span>
+                        )}
+                      </h3>
+                      <strong>{i.price}</strong>
+                    </div>
+                    {i.description && <p>{i.description}</p>}
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))
+        ) : (
+          <div className="empty-state">
+            <h2>No favourites found just yet.</h2>
+            <p>Try another search or select All categories.</p>
+            <button
+              className="button"
+              onClick={() => {
+                setQ("");
+                setParams({});
+              }}
+            >
+              Reset filters
+            </button>
+          </div>
+        )}
+      </div>
+      <aside className="menu-help">
+        <h2>Make a moment of it.</h2>
+        <p>Enjoy your favourites at our Kotugoda café.</p>
+        <Link className="button" to="/reservations">
+          Book a table ↗
+        </Link>
+      </aside>
     </div>
   );
-};
-
-export default Menu;
+}

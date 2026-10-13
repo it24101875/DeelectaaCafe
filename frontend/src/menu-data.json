@@ -1,0 +1,479 @@
+[
+  {
+    "name": "Coffee",
+    "items": [
+      {
+        "name": "Espresso",
+        "price": "Rs. 400",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Espresso Con Panna",
+        "price": "Rs. 450",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Affogato",
+        "price": "Rs. 450",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Americano",
+        "price": "Rs. 450",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Macchiato",
+        "price": "Rs. 550",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Cappuccino",
+        "price": "Rs. 600",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Latte",
+        "price": "Rs. 650",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Flat White",
+        "price": "Rs. 650",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Speciality Coffee",
+    "items": [
+      {
+        "name": "Caramel Macchiato",
+        "price": "Rs. 950",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Caramel Latte",
+        "price": "Rs. 800",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Hazelnut Latte",
+        "price": "Rs. 800",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mocha Latte",
+        "price": "Rs. 800",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Spanish Latte",
+        "price": "Rs. 800",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Chocolate & Malt",
+    "items": [
+      {
+        "name": "Hot Chocolate",
+        "price": "Rs. 850",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Iced Chocolate",
+        "price": "Rs. 850",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Hot Milo",
+        "price": "Rs. 850",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Iced Milo",
+        "price": "Rs. 850",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Iced Tea",
+    "items": [
+      {
+        "name": "Classic Iced Tea",
+        "price": "Rs. 750",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Berry Peach Iced Tea",
+        "price": "Rs. 750",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mint Lychee",
+        "price": "Rs. 750",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Lychee Butterfly Pea",
+        "price": "Rs. 750",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Bubble Tea",
+    "items": [
+      {
+        "name": "Chocolate Bubble Tea",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Bubble Tea",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Milo Bubble Tea",
+        "price": "Rs. 1250",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Mojitos",
+    "items": [
+      {
+        "name": "Classic Mojito",
+        "price": "Rs. 900",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Blueberry Mojito",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Mojito",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Raspberry Mojito",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Passion Mojito",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Lychee Mojito",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Margaritas",
+    "items": [
+      {
+        "name": "Classic Margarita",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Raspberry Margarita",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Blueberry Margarita",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Shirley Temple",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Margarita",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Piña Colada",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Milk Shakes",
+    "items": [
+      {
+        "name": "Vanilla Milk Shake",
+        "price": "Rs. 900",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mango Shake",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Milk Shake",
+        "price": "Rs. 900",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Brownie Shake",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Milk Shake",
+        "price": "Rs. 900",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Oreo Shake",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "KitKat Shake",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Smoothies",
+    "items": [
+      {
+        "name": "Banana Berry",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Blueberry Cream",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mango Berry",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Raspberry Cream",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Peach Tropical",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Frappés",
+    "items": [
+      {
+        "name": "Caramel Frappé",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Frappé",
+        "price": "Rs. 1150",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mocha Frappé",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Peach Frappé",
+        "price": "Rs. 1150",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Brownie Frappé",
+        "price": "Rs. 1050",
+        "signature": false,
+        "description": ""
+      },
+      {
+        "name": "Mango Frappé",
+        "price": "Rs. 1150",
+        "signature": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Sandwiches",
+    "items": [
+      {
+        "name": "The Signature Sandwich",
+        "price": "Rs. 1000",
+        "signature": true,
+        "description": "House special — layered to perfection."
+      },
+      {
+        "name": "Club Sandwich",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": "Premium chicken ham, sliced egg, rich cheese, fresh tomatoes & crisp greens."
+      },
+      {
+        "name": "Sweet Honey Crunchy Chicken",
+        "price": "Rs. 1600",
+        "signature": false,
+        "description": "Crispy fried chicken tossed in hot-honey & cracked-pepper glaze, topped with crunchy slaw."
+      }
+    ]
+  },
+  {
+    "name": "Gourmet Burgers",
+    "items": [
+      {
+        "name": "The Déelectaa Grand Burger",
+        "price": "Rs. 1300",
+        "signature": true,
+        "description": "Stacked high with premium ingredients, melted cheese & our secret signature sauce."
+      },
+      {
+        "name": "The Smoked Beef Burger",
+        "price": "Rs. 1850",
+        "signature": false,
+        "description": "A juicy smoky beef patty smothered in rich cheese, topped with crisp onions & BBQ glaze."
+      }
+    ]
+  },
+  {
+    "name": "Bites & Portions",
+    "items": [
+      {
+        "name": "Classic Golden French Fries",
+        "price": "from Rs. 400",
+        "signature": false,
+        "description": "Hand-cut, golden & crisp — served with house dip. Regular · 250g Rs. 400 Large · 500g Rs. 750"
+      }
+    ]
+  },
+  {
+    "name": "Submarines",
+    "items": [
+      {
+        "name": "The Déelectaa Supreme Submarine",
+        "price": "Rs. 1650",
+        "signature": true,
+        "description": "A premium stack of roasted chicken, chicken ham, melted cheese, fresh veggies & our secret sauce."
+      },
+      {
+        "name": "Crispy Chicken Submarine",
+        "price": "Rs. 1100",
+        "signature": false,
+        "description": "Crispy chicken layered with creamy chicken filling."
+      },
+      {
+        "name": "Classic Creamy Egg Salad Submarine",
+        "price": "Rs. 980",
+        "signature": false,
+        "description": "A comforting, rich blend of fresh mashed egg & creamy mayo."
+      }
+    ]
+  },
+  {
+    "name": "Desserts & Sweets",
+    "items": [
+      {
+        "name": "Rich Chocolate Lava Cake",
+        "price": "Rs. 600",
+        "signature": true,
+        "description": "Served warm with a molten chocolate centre & a scoop of vanilla ice cream."
+      },
+      {
+        "name": "Classic New York Cheesecake",
+        "price": "Rs. 700",
+        "signature": false,
+        "description": "Dense, creamy & baked to perfection with a graham cracker crust."
+      },
+      {
+        "name": "Warm Fudgy Walnut Brownie",
+        "price": "Rs. 400",
+        "signature": false,
+        "description": "A decadent, chewy brownie topped with vanilla ice cream."
+      },
+      {
+        "name": "Signature Tiramisu Cup",
+        "price": "Rs. 600",
+        "signature": false,
+        "description": "Layers of coffee-soaked ladyfingers & light mascarpone cream."
+      }
+    ]
+  }
+]

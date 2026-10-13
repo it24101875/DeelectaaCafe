@@ -102,7 +102,7 @@ export default function Home() {
         <div className="shell story-grid">
           <img
             src="/brand/cafe.webp"
-            alt="Inside Deelectaa Café in Kotugoda"
+            alt="Deelectaa Café in Kotugoda"
             width="900"
             height="650"
             loading="lazy"
